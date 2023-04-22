@@ -13,7 +13,7 @@ const options = {
   origin: ["http://localhost:3000"],
 };
 
-const server = app.listen(PORT, () => {
+const server = app.listen(process.env.PORT || PORT, () => {
   console.log("Server started");
 });
 
