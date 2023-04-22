@@ -8,5 +8,8 @@
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1"
   },
-  "type": "module"
+  "type": "module",
+  "engines":{
+    "node": "12.16.1"
+  }
 }
