@@ -29,11 +29,17 @@
       </div>
     </div>
     <div>
+        <div id='url' class="d-flex flex-row flex-wrap w-75 justify-content-evenly gap-4 mx-auto my-4 bg-dark-subtle p-2 rounded-3">
+          
+        </div>
         <form class="d-flex flex-row flex-wrap w-75 justify-content-evenly gap-4 mx-auto my-4 bg-dark-subtle p-2 rounded-3">
             <div class="d-flex flex-column align-items-center gap-2">
               <label for="inputName1" class="form-label">Team 1 Name</label>
               <input type="text" class="form-control" id="inputName1">
-              <button type="button" class="btn btn-dark" id="addTeam1">+1</button>
+              <div class='d-flex flex-row gap-2 justify-content-evenly w-100'>
+                <button type="button" class="btn btn-dark" id="addTeam1">+1</button>
+                <button type="button" class="btn btn-dark" id="minusTeam1">-1</button>
+              </div>
             </div>
             <div class="d-flex flex-column  gap-2">
               <button type="button" class="btn btn-dark" id="nxtQuarter">Next Quarter</button>
@@ -43,7 +49,10 @@
             <div class="d-flex flex-column align-items-center gap-2">
               <label for="inputName2" class="form-label">Team 2 Name</label>
               <input type="text" class="form-control" id="inputName2">
-              <button type="button" class="btn btn-dark" id="addTeam2">+1</button>
+              <div class='d-flex flex-row gap-2 justify-content-evenly w-100'>
+                <button type="button" class="btn btn-dark" id="addTeam2">+1</button>
+                <button type="button" class="btn btn-dark" id="minusTeam2">-1</button>
+              </div>
             </div>
           </form>
     </div>

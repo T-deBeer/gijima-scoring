@@ -10,10 +10,10 @@ const PORT = 3000;
 const app = express();
 const options = {
   cors: true,
-  origin: ["http://localhost:3000"],
+  origin: ["https://gijima-scoring-1.tiaande.repl.co"],
 };
 
-const server = app.listen(process.env.PORT || 3000);
+const server = app.listen(PORT);
 
 const io = new Server(server, options);
 

@@ -1,5 +1,5 @@
 import io from "socket.io-client";
-const socket = io("http://localhost:3000");
+const socket = io("https://gijima-scoring-1.tiaande.repl.co");
 
 window.onload = () => {
   localStorage.setItem("scoreTeam1", 0);
@@ -13,6 +13,26 @@ const addScoreTeam2 = document.getElementById("addTeam2");
 const nextQuarter = document.getElementById("nxtQuarter");
 const endGame = document.getElementById("endGame");
 const reset = document.getElementById("reset");
+const url = document.getElementById("url");
+
+if (url) {
+
+  var link = 'https://' + window.location.host.split('/')[0] + '/netball/scoreboard';
+  url.innerHTML = 'Link to scoreboard:\n\n' + link;
+
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(link);
+      alert('Content copied to clipboard');
+    } catch (err) {
+      console.log('Failed to copy: '+ err);
+    }}
+  
+  url.addEventListener("click", (e) =>{
+    copyContent();
+  })
+}
+
 
 if (team1_Name) {
   team1_Name.addEventListener("input", (e) => {
